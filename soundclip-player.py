@@ -6,7 +6,7 @@ from time import sleep
 clips = os.listdir('sound-clips')
 
 while True:
-  random_clip = clips[random.randrange(0,len(clips))]
+  random_clip = 'sound-clips/' + clips[random.randrange(0,len(clips))]
   wave_obj = simpleaudio.WaveObject.from_wave_file(random_clip)
   play_obj = wave_obj.play()
   play_obj.wait_done()
