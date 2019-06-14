@@ -1,10 +1,16 @@
 import os
 import simpleaudio
+import random
 from time import sleep
 
 clips = os.listdir('sound-clips')
 
-print(clips)
+while True:
+  random_clip = clips[random.randrange(0,len(clips))]
+  wave_obj = simpleaudio.WaveObject.from_wave_file(random_clip)
+  play_obj = wave_obj.play()
+  play_obj.wait_done()
+  sleep(10)
 
 #for event in button.read_loop():
 #  if should_ring(last_event_timestamp, event):
