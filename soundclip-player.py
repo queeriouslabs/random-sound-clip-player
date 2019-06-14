@@ -2,7 +2,7 @@ import os
 import simpleaudio
 from time import sleep
 
-clips = os.listdir()
+clips = os.listdir('sound-clips')
 
 print(clips)
 
